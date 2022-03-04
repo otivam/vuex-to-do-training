@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <to-do-list></to-do-list>
-    <youtube></youtube>
-    <facebook></facebook>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <facebook img="facebook_img_2.jpg" title="Test title (FB post)" info="What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."></facebook>
   </div>
 </template>
 
@@ -17,10 +18,18 @@ export default {
     'to-do-list': list,
     'youtube': test_yt,
     'facebook': test_fb
+  },
+  data() {
+    return {
+      img: '',
+      title: '',
+      info: ''
+    }
   }
 }
 </script>
 
 <style>
 
+@import '~bootstrap/dist/css/bootstrap.css'
 </style>

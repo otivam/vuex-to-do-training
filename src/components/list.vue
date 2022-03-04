@@ -13,6 +13,11 @@
 
 <script>
 export default {
+    data() {
+        return {
+            item_text: null
+        }
+    },
     computed: {
         items(){
             return this.$store.state.items;
@@ -20,7 +25,7 @@ export default {
     },
     methods: {
         add_item: function(item_text){
-            this.$store.commit('add_item',item_text);
+            this.$store.dispatch('add_item',item_text);
             this.item_text = "";
         },
         remove_item: function(index){
